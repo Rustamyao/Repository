@@ -8,9 +8,9 @@
 </head>
 <body>
 <!-- Шапка сайта (копия с главной страницы) -->
-<header>
+<header class="site-header">
     <img src="logo.jpeg" alt="Логотип" />
-    <nav>
+    <nav class="site-nav">
         <ul>
             <li><a href="index.html">Главная</a></li>
             <li><a href="contacts.html">Контакты</a></li>
@@ -18,48 +18,77 @@
     </nav>
 </header>
 
+<hr />
+
 <!-- Контент страницы Контакты -->
-<main>
-    <h2 class="heading2">Contact Us</h2>
-    <p class="paragraph">Парараграф</p>
-    <img src="conts.png" alt="Изображение" />
-    <h4 class="heading4">Address</h4>
-    <p class="paragraph">Текст</p>
-    <h4 class="heading4">Phone</h4>
-    <ul>
-        <li>+7 (800) 555-3535</li>
-        <li>+7 (912) 777-7777</li>
-    </ul>
-    <h4 class="heading4">Online Service</h4>
-    <ul>
-        <li><a href="https://google.com">Сайт</a></li>
-        <li><a href="mailto:someone@example.com">Почта</a></li>
-    </ul>
-    <h4 class="heading4">Send us message</h4>
-    <form class="background" action="#" method="post">
-        <label for="name">Full Name</label>
-        <input class="input-field" type="text" id="name" name="name" required />
-        <br />
-        <label for="email">Email</label>
-        <input class="input-field" type="email" id="email" name="email" required />
-        <br />
-        <label for="message">Message</label>
-        <textarea class="input-field" id="message" name="message" required></textarea>
-        <br />
-        <button class="submit-button" type="submit">Submit</button>
-    </form>
+<main class="main-content">
+    <section class="contact-info">
+        <h2 class="heading2">Contact Us</h2>
+        <p class="paragraph">Параграф с произвольным текстом.</p>
+        <ul>
+            <li>Пункт 1</li>
+            <li>Пункт 2</li>
+        </ul>
+        <form action="#" method="post">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" required />
+            <button type="submit">Отправить</button>
+        </form>
+        <img src="for_contacts.png" alt="Изображение" />
+        <h4 class="heading4">Address</h4>
+        <p class="paragraph">Текст</p>
+        <h4 class="heading4">Phone</h4>
+        <ul>
+            <li>+7 (800) 555-3535</li>
+            <li>+7 (912) 777-7777</li>
+        </ul>
+        <h4 class="heading4">Online Service</h4>
+        <ul>
+            <li><a href="https://google.com">Сайт</a></li>
+            <li><a href="mailto:someone@example.com">Почта</a></li>
+        </ul>
+    </section>
+    <hr />
+    <section class="contact-form">
+        <h4 class="heading4">Send us message</h4>
+        <p class="paragraph">Параграф с произвольным текстом.</p>
+        <ul>
+            <li>Пункт 1</li>
+            <li>Пункт 2</li>
+        </ul>
+        <form class="background" action="#" method="post">
+            <label for="fullname">Full Name</label>
+            <input class="input-field" type="text" id="fullname" name="fullname" required />
+            <br />
+            <label for="email">Email</label>
+            <input class="input-field" type="email" id="email" name="email" required />
+            <br />
+            <label for="message">Message</label>
+            <textarea class="input-field" id="message" name="message" required></textarea>
+            <br />
+            <button class="submit-button" type="submit">Submit</button>
+        </form>
+        <img src="conts.png" alt="Изображение" />
+    </section>
 </main>
 
 <!-- Подвал сайта (копия с главной страницы) -->
-<footer>
+<footer class="site-footer">
+    <hr />
     <h3 class="heading3">Контакты</h3>
     <p class="paragraph">Для подвала сайта параграф и не более десяти слов.</p>
-    <hr />
     <ul>
         <li>Текст не более пяти слов</li>
         <li>Телефон: +7 (123) 456-7890</li>
         <li>Email: example@example.com</li>
     </ul>
+    <form action="#" method="post">
+        <label for="feedback">Обратная связь</label>
+        <textarea id="feedback" name="feedback" required></textarea>
+        <button type="submit">Отправить</button>
+    </form>
+    <img src="logo.jpeg" alt="Изображение" />
+    <hr />
     <p class="paragraph">Все права защищены.</p>
 </footer>
 </body>

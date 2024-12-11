@@ -8,9 +8,9 @@
 </head>
 <body>
 <!-- Шапка сайта -->
-<header>
+<header class="site-header">
     <img src="logo.jpeg" alt="Логотип" />
-    <nav>
+    <nav class="site-nav">
         <ul>
             <li><a href="index.html">Главная</a></li>
             <li><a href="contacts.html">Контакты</a></li>
@@ -24,28 +24,74 @@
     </div>
 </header>
 
+<hr />
+
 <!-- Основной контент -->
-<main>
-    <h1 class="heading1">Заголовок</h1>
-    <p class="paragraph">Параграф с произвольным текстом.</p>
-    <h3 class="heading3">Заголовок заголовок заголовок</h3>
-    <h4 class="heading4">Заголовок заголовок заголовок заголовок заголовок</h4>
-    <p class="paragraph">Параграф с произвольным текстом не более пятнадцати слов.</p>
-    <h3 class="heading3">Заголовок три слова</h3>
-    <p class="paragraph">Параграф с произвольным текстом не более десяти слов.</p>
+<main class="main-content">
+    <section class="hero-section">
+        <h1 class="heading1">Заголовок</h1>
+        <p class="paragraph">Параграф с произвольным текстом.</p>
+        <ul>
+            <li>Пункт 1</li>
+            <li>Пункт 2</li>
+        </ul>
+        <form action="#" method="post">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" required />
+            <button type="submit">Отправить</button>
+        </form>
+        <img src="table.jpg" alt="Изображение" />
+    </section>
     <hr />
+    <section class="services-section">
+        <h3 class="heading3">Заголовок заголовок заголовок</h3>
+        <h4 class="heading4">Заголовок заголовок заголовок заголовок заголовок</h4>
+        <p class="paragraph">Параграф с произвольным текстом не более пятнадцати слов.</p>
+        <ul>
+            <li>Пункт 1</li>
+            <li>Пункт 2</li>
+        </ul>
+        <form action="#" method="post">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <button type="submit">Отправить</button>
+        </form>
+        <img src="notebook.jpg" alt="Изображение" />
+    </section>
+    <hr />
+    <section class="about-section">
+        <h3 class="heading3">Заголовок три слова</h3>
+        <p class="paragraph">Параграф с произвольным текстом не более десяти слов.</p>
+        <ul>
+            <li>Пункт 1</li>
+            <li>Пункт 2</li>
+        </ul>
+        <form action="#" method="post">
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+        <img src="messages.jpg" alt="Изображение" />
+    </section>
 </main>
 
 <!-- Подвал сайта -->
-<footer>
+<footer class="site-footer">
+    <hr />
     <h3 class="heading3">Контакты</h3>
     <p class="paragraph">Для подвала сайта параграф и не более десяти слов.</p>
-    <hr />
     <ul>
         <li>Текст не более пяти слов</li>
         <li>Телефон: +7 (123) 456-7890</li>
         <li>Email: example@example.com</li>
     </ul>
+    <form action="#" method="post">
+        <label for="feedback">Обратная связь</label>
+        <textarea id="feedback" name="feedback" required></textarea>
+        <button type="submit">Отправить</button>
+    </form>
+    <img src="logo.jpeg" alt="Изображение" />
+    <hr />
     <p class="paragraph">Все права защищены.</p>
 </footer>
 </body>
