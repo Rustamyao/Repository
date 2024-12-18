@@ -5,94 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
     <link rel="stylesheet" href="src/assets/styles/style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            for (let link of links) {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        const topOffset = -80; // Adjust this value as needed
+                        window.scrollTo({
+                            top: targetElement.getBoundingClientRect().top + window.scrollY + topOffset,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            }
+        });
+    </script>
 </head>
 <body>
 <!-- Шапка сайта -->
 <header class="site-header">
-    <img src="logo.jpeg" alt="Логотип" />
-    <nav class="site-nav">
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </nav>
-    <div class="breadcrumbs">
-        <a href="#" class="crumb">Раз</a>
-        <a href="#" class="crumb">Два</a>
-        <a href="#" class="crumb">Три</a>
-        <a href="#" class="crumb">Четыре</a>
+    <div class="header-content">
+        <a href="index.html"><img src="logo.jpeg" alt="Логотип" class="logo" /></a>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="cases.html">Cases</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+        <div class="contact-info">
+            <a href="tel:+77072548147">+7 (707) 254 81 47</a>
+            <a href="tel:+77783959026">+7 (778) 395 90 26</a>
+            <a href="mailto:rustamtadzhibaevofficial1@gmail.com">Mail us</a>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/rustam_tadzhibaev_official/" target="_blank"><img src="src/assets/img/Instagram.png" alt="Instagram"></a>
+                <a href="https://t.me/rustam_tadzhibaev_official" target="_blank"><img src="src/assets/img/Telegram.png" alt="Telegram"></a>
+            </div>
+        </div>
     </div>
 </header>
-
-<hr />
 
 <!-- Основной контент -->
 <main class="main-content">
     <section class="hero-section">
-        <h1 class="heading1">Заголовок</h1>
-        <p class="paragraph">Параграф с произвольным текстом.</p>
-        <ul>
-            <li>Пункт 1</li>
-            <li>Пункт 2</li>
-        </ul>
-        <form action="#" method="post">
-            <label for="name">Имя</label>
-            <input type="text" id="name" name="name" required />
-            <button type="submit">Отправить</button>
-        </form>
-        <img src="table.jpg" alt="Изображение" />
+        <div class="hero-content">
+            <h1 class="heading1">Development of mobile applications and web services of any complexity</h1>
+            <p class="paragraph">We create mobile applications for iOS, Android that transfer your business to mobile applications of your customers' devices</p>
+            <form action="#" method="post" class="consultation-form">
+                <label for="phone">Phone number</label>
+                <input type="text" id="phone" name="phone" required />
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" required />
+                <button type="submit">Get Consultation</button>
+            </form>
+        </div>
+        <div class="hero-image">
+            <img src="src/assets/img/MobileApp.png" alt="Mobile app">
+        </div>
     </section>
-    <hr />
-    <section class="services-section">
-        <h3 class="heading3">Заголовок заголовок заголовок</h3>
-        <h4 class="heading4">Заголовок заголовок заголовок заголовок заголовок</h4>
-        <p class="paragraph">Параграф с произвольным текстом не более пятнадцати слов.</p>
-        <ul>
-            <li>Пункт 1</li>
-            <li>Пункт 2</li>
-        </ul>
-        <form action="#" method="post">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-            <button type="submit">Отправить</button>
-        </form>
-        <img src="notebook.jpg" alt="Изображение" />
+
+    <section id="about-us">
+        <p>Our company is the best company in the world, to be honest. In more detail, the company specializes in developing mobile applications and web services of any complexity. We have a team of experienced professionals who are dedicated to delivering high-quality solutions to our clients.</p>
     </section>
-    <hr />
-    <section class="about-section">
-        <h3 class="heading3">Заголовок три слова</h3>
-        <p class="paragraph">Параграф с произвольным текстом не более десяти слов.</p>
+
+    <section id="team">
+        <div class="team-member">
+            <h3>Rustam Tadzhibaev</h3>
+            <p>The CEO of the company. The best leader in the world. An incredible person, in short.</p>
+        </div>
+        <div class="team-member">
+            <h3>Ivan Ivanov</h3>
+            <p>Chief Analyst. Analyzes everything that is possible and impossible. A great person, though not as much as the CEO.</p>
+        </div>
+        <div class="team-member">
+            <h3>Petrov Petr</h3>
+            <p>The chief programmer. The lord of all variables and the master of all classes. A wonderful person as well, although, for some reason, always looks tired.</p>
+        </div>
+    </section>
+
+    <section id="careers">
+        <p>We are always looking for talented individuals to join our team. If you are passionate about technology and want to work in a dynamic environment, we would love to hear from you.</p>
+        <h3>Open Positions</h3>
         <ul>
-            <li>Пункт 1</li>
-            <li>Пункт 2</li>
+            <li>
+                <h4>Software Developer</h4>
+                <p>Responsibilities include the development and support of software applications. Requirements include a bachelor's degree in computer science or a related field, and software development experience.</p>
+            </li>
+            <li>
+                <h4>UI/UX Designer</h4>
+                <p>Responsibilities include the development of user interfaces. Requirements include a bachelor's degree in design or related fields, and work experience in UI/UX design.</p>
+            </li>
+            <li>
+                <h4>Project Manager</h4>
+                <p>Responsibilities include managing projects from start to finish. Requirements include a bachelor's degree in a related field, experience in project management, and strong organizational skills.</p>
+            </li>
         </ul>
-        <form action="#" method="post">
-            <label for="message">Сообщение</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Отправить</button>
-        </form>
-        <img src="messages.jpg" alt="Изображение" />
+    </section>
+
+    <section id="mobile-development">
+        <h2>Mobile Development</h2>
+        <p>Our mobile development services include creating high-quality mobile applications for iOS and Android platforms. We ensure that our apps are user-friendly, efficient, and meet the highest standards of performance and security.</p>
+    </section>
+
+    <section id="web-development">
+        <h2>Web Development</h2>
+        <p>Our web development services cover the creation of responsive and dynamic websites. We use the latest technologies to build websites that are not only visually appealing but also functional and easy to navigate.</p>
+    </section>
+
+    <section id="ui-ux-design">
+        <h2>UI/UX Design</h2>
+        <p>Our UI/UX design services focus on creating intuitive and user-friendly interfaces. We strive to enhance the user experience by designing interfaces that are both aesthetically pleasing and highly functional.</p>
+        <br><br><br><br><br><br><br><br><br><br>
     </section>
 </main>
 
 <!-- Подвал сайта -->
 <footer class="site-footer">
-    <hr />
-    <h3 class="heading3">Контакты</h3>
-    <p class="paragraph">Для подвала сайта параграф и не более десяти слов.</p>
-    <ul>
-        <li>Текст не более пяти слов</li>
-        <li>Телефон: +7 (123) 456-7890</li>
-        <li>Email: example@example.com</li>
-    </ul>
-    <form action="#" method="post">
-        <label for="feedback">Обратная связь</label>
-        <textarea id="feedback" name="feedback" required></textarea>
-        <button type="submit">Отправить</button>
-    </form>
-    <img src="logo.jpeg" alt="Изображение" />
-    <hr />
-    <p class="paragraph">Все права защищены.</p>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3 class="heading3">Company</h3>
+            <ul>
+                <li><a href="#about-us">About us</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#careers">Careers</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3 class="heading3">Services</h3>
+            <ul>
+                <li><a href="#mobile-development">Mobile Development</a></li>
+                <li><a href="#web-development">Web Development</a></li>
+                <li><a href="#ui-ux-design">UI/UX Design</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3 class="heading3">Contact</h3>
+            <ul>
+                <li><a href="tel:+77072548147">+7 (707) 254 81 47</a></li>
+                <li><a href="tel:+77783959026">+7 (778) 395 90 26</a></li>
+                <li><a href="mailto:rustamtadzhibaevofficial1@gmail.com">Mail us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3 class="heading3">Follow us</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/rustam_tadzhibaev_official/" target="_blank"><img src="src/assets/img/Instagram.png" alt="Instagram"></a>
+                <a href="https://t.me/rustam_tadzhibaev_official" target="_blank"><img src="src/assets/img/Telegram.png" alt="Telegram"></a>
+            </div>
+        </div>
+    </div>
 </footer>
 </body>
 </html>
