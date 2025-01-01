@@ -1,6 +1,9 @@
 .development-cycle {
   background-color: white;
   margin-top: 0px;
+  overflow: hidden;
+  width: 1440px;
+  height: 500px;
 
   h1 {
     font-size: 36px;
@@ -16,6 +19,7 @@
   .content {
     display: flex;
     justify-content: space-between;
+    padding-top: 30px;
 
     .left, .right {
       width: 48%;
@@ -63,7 +67,9 @@
     }
 
     .right {
+      position: relative;
       margin: 25px 0 25px 0;
+      top: -20px;
 
       ul {
         list-style: none;
