@@ -1,97 +1,78 @@
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 40px;
-    background: #f8f8f8;
-    display: flex;
-    gap: 40px;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f8f9fa;
+    color: #333;
 }
-.left, .right {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-}
-.left {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.pizza-options {
-    display: flex;
+
+#posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
-.pizza-option {
-    text-align: center;
-    cursor: pointer;
-    border: 2px solid transparent;
-    border-radius: 10px;
-    padding: 10px;
-    transition: border-color 0.3s;
-}
-.pizza-option.selected {
-    border-color: orange;
-    background: #fff5e6;
-}
-.pizza-option img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
+
+.post {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.right {
-    width: 300px;
+.post h3 {
+    margin-top: 0;
 }
-.size-toggle {
-    display: flex;
-    justify-content: space-between;
+
+.post a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+#pagination {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#pagination button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#pagination button:disabled {
+    background-color: #6c757d;
+    cursor: default;
+}
+
+#post {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+#comments {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comment {
     margin-bottom: 20px;
 }
-.size-toggle label {
-    flex: 1;
-    text-align: center;
-    border: 2px solid #ddd;
-    padding: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-.size-toggle input:checked + label {
-    background: #f0f0f0;
-    border-color: orange;
-    font-weight: bold;
-}
-.addons {
-    display: flex;
-    gap: 10px;
-}
-.addon {
-    flex: 1;
-    background: #fafafa;
-    border-radius: 8px;
-    text-align: center;
-    padding: 10px;
-    cursor: pointer;
-    border: 2px solid transparent;
-}
-.addon.selected {
-    border-color: orange;
-    background: #fff5e6;
-}
-.addon img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-}
 
-.cart-button {
-    margin-top: 30px;
-    background: orange;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    padding: 15px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
+.comment p {
+    margin: 5px 0;
 }
